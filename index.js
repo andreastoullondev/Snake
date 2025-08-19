@@ -22,7 +22,16 @@ window.onload = function(){
 
 function jogo(){
     // configuração da tela
-    ctx.fillStyle = "#2980b9"
+    ctx.fillStyle = "#2980b9";
     //distancia da borda 
     ctx.fillRect(0,0, canvas.width, canvas.height );
+
+    //posicionando a cobra
+    snake.push({x:positionX, y: positionY})
+
+    //configuração da cobra
+    ctx.fillStyle = "#00f102"
+        for(let i=0; i < snake.length; i++){
+        ctx.fillRect(snake[i].x*grid, snake[i].y*grid, grid-1, grid-1)
+        }
 }
