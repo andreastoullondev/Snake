@@ -7,4 +7,12 @@ window.onload = function(){
     //Variaveis
 
     snake = [];
+    positionX = 10;
+    positionY = 10;
+    foodX = 15;
+    footY = 15;
+    velX = 0;
+    velY = 0;
+    grid = 20;
+    tam = 3;
 }
