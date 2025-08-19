@@ -15,4 +15,14 @@ window.onload = function(){
     velY = 0;
     grid = 20;
     tam = 3;
+
+    //Chamada da função jogo a cada 100 milisegundos
+    setInterval(jogo, 100)
+}
+
+function jogo(){
+    // configuração da tela
+    ctx.fillStyle = "#2980b9"
+    //distancia da borda 
+    ctx.fillRect(0,0, canvas.width, canvas.height );
 }
