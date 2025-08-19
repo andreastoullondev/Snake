@@ -27,7 +27,8 @@ function jogo(){
     ctx.fillRect(0,0, canvas.width, canvas.height );
 
     //posicionando a cobra
-    snake.push({x:positionX, y: positionY})
+    snake.push({x:positionX, y: positionY});
+    console.log(snake[0]);
 
     //configuração da cobra
     ctx.fillStyle = "#00f102"
