@@ -83,7 +83,7 @@ function jogo(){
     if(positionY > grid){
         positionY = 0;
     }
-    
+
     //posicionando a cobra
     snake.push({x:positionX, y: positionY});
    
@@ -99,4 +99,9 @@ function jogo(){
         while(snake.length > tam){
             snake.shift();
         }
+
+        //Configurando comida  #F1C40F
+
+        ctx.fillStyle = "Red";
+        ctx.fillRect(foodX*grid, footY*grid, grid-1, grid -1);
 }
