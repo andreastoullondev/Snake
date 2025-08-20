@@ -79,4 +79,8 @@ function jogo(){
         for(let i=0; i < snake.length; i++){
         ctx.fillRect(snake[i].x*grid, snake[i].y*grid, grid-1, grid-1)
         }
+        //Apagando os Rastros 
+        while(snake.length > tam){
+            snake.shift();
+        }
 }
