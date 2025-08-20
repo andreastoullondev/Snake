@@ -30,19 +30,19 @@ window.onload = function(){
                 velY = 0;
                 break;
             // Seta esqueda = 37
-            case 39:
+            case 37:
                 velX = -1;
                 velY = 0;
                 break;
             // Seta pra cima = 38
             case 38:
-                velX = 0;
                 velY = -1;
+                velX = 0;
                 break;
             // Seta para baixo = 40
             case 40:
-                velX = 0;
                 velY = 1;
+                velX = 0;
                 break;
         }
     })
@@ -65,6 +65,10 @@ function jogo(){
     ctx.fillStyle = "#2980b9";
     //distancia da borda 
     ctx.fillRect(0,0, canvas.width, canvas.height );
+
+    //Deslocamento da cobra
+    positionX += velX;
+    positionY += velY;
 
     //posicionando a cobra
     snake.push({x:positionX, y: positionY});
