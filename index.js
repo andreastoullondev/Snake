@@ -70,15 +70,31 @@ function jogo(){
     positionX += velX;
     positionY += velY;
 
+      //Espelhamento das bordas
+    if(positionX < 0){
+        positionX = grid;
+    }
+    if(positionX > grid){
+        positionX = 0;
+    }
+    if(positionY < 0){
+        positionY = grid;
+    }
+    if(positionY > grid){
+        positionY = 0;
+    }
+    
     //posicionando a cobra
     snake.push({x:positionX, y: positionY});
-    console.log(snake[0]);
+   
 
+  
     //configuração da cobra
     ctx.fillStyle = "#00f102"
         for(let i=0; i < snake.length; i++){
         ctx.fillRect(snake[i].x*grid, snake[i].y*grid, grid-1, grid-1)
         }
+
         //Apagando os Rastros 
         while(snake.length > tam){
             snake.shift();
