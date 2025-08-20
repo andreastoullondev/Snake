@@ -104,4 +104,7 @@ function jogo(){
 
         ctx.fillStyle = "Red";
         ctx.fillRect(foodX*grid, footY*grid, grid-1, grid -1);
+
+
+        // comendo a commida
 }
