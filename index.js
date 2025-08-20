@@ -19,6 +19,8 @@ window.onload = function(){
 
     //Chamada da função jogo a cada 100 milisegundos
     setInterval(jogo, 100)
+
+    //controles
 }
 // centralizar o jogo
 function centralizarCanvas(){
@@ -27,15 +29,11 @@ function centralizarCanvas(){
     canvas.style.marginLeft = `${margemEsquerda}px`;
     canvas.style.marginTop = `${margemTopo}px`;
 }
-
-
 // Responsivo
 window.addEventListener('resize', ()=>{
     centralizarCanvas();
 });
-
 centralizarCanvas();
-
 // Posicionamento do jogo //-------------------------//
 function jogo(){
     // configuração da tela
