@@ -107,4 +107,10 @@ function jogo(){
 
 
         // comendo a commida
+
+        if(positionX == foodX && positionY == footY){
+            tam++;
+            foodX = Math.floor(Math.random()*grid);
+            footY = Math.floor(Math.random()*grid);
+        }
 }
