@@ -21,6 +21,31 @@ window.onload = function(){
     setInterval(jogo, 100)
 
     //controles
+
+    document.addEventListener("keydown",(e)=>{
+        switch(e.keyCode){
+            //Seta direita = 39
+            case 39:
+                velX = 1;
+                velY = 0;
+                break;
+            // Seta esqueda = 37
+            case 39:
+                velX = -1;
+                velY = 0;
+                break;
+            // Seta pra cima = 38
+            case 38:
+                velX = 0;
+                velY = -1;
+                break;
+            // Seta para baixo = 40
+            case 40:
+                velX = 0;
+                velY = 1;
+                break;
+        }
+    })
 }
 // centralizar o jogo
 function centralizarCanvas(){
