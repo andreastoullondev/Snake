@@ -4,6 +4,7 @@ window.onload = function(){
     canvas = document.getElementById("canvas");
     ctx = canvas.getContext("2d");
 
+
     //Variaveis
 
     snake = [];
@@ -19,7 +20,23 @@ window.onload = function(){
     //Chamada da função jogo a cada 100 milisegundos
     setInterval(jogo, 100)
 }
+// centralizar o jogo
+function centralizarCanvas(){
+    const margemEsquerda = (window.innerWidth - canvas.width) / 2;
+    const margemTopo = (window.innerHeight - canvas.height) / 2;
+    canvas.style.marginLeft = `${margemEsquerda}px`;
+    canvas.style.marginTop = `${margemTopo}px`;
+}
 
+
+// Responsivo
+window.addEventListener('resize', ()=>{
+    centralizarCanvas();
+});
+
+centralizarCanvas();
+
+// Posicionamento do jogo //-------------------------//
 function jogo(){
     // configuração da tela
     ctx.fillStyle = "#2980b9";
